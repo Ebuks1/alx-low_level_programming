@@ -1,18 +1,19 @@
 #include "main.h"
 
 /**
- * print_alphabet - print a-z
+ * main - Entry point
  *
- * Return: Always void
+ * Return: Always 0 (Success)
  */
-
-void print_alphabet(void)
+int main(void)
 {
-	int a;
+	char joy[9] = "_putchar";
+	int i;
 
-	for (a = 97; a <= 122; a++)
+	for (i = 0; i < 8; i = i + 1)
 	{
-		_putchar(a);
+		_putchar(joy[i]);
 	}
 	_putchar('\n');
+	return (0);
 }
