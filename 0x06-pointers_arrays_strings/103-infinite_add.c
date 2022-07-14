@@ -1,12 +1,12 @@
 #include "main.h"
-#include <stdio.h>
 /**
- * infinite_add - adds two numbers
- * @n1: num one
- * @n2: num two
- * @r: buffer to store result
+ * infinite_add - add two number
+ * @n1: first number
+ * @n2: second number
+ * @r: buffer for result
  * @size_r: buffer size
- * Return: dest
+ *
+ * Return: address of r or 0
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
@@ -37,9 +37,13 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		else
 			*(r + bg) = '0';
 		if (c1 > 0)
-			c1--, dr1 = *(n1 + c1) - 48;
+			c1--, dr2 = *(n1 + c1) - 48;
 		else
 			dr1 = 0;
+		if (c2 > 0)
+			c2--, dr2 = *(n2 + c2) - 48;
+		else
+			dr2 = 0;
 		bg--, size_r--;
 	}
 	if (*(r) == '0')
